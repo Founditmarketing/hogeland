@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# Hogeland Auto Plaza
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**24/7 Towing • Expert Auto Repair • Quality Parts**
+*Family-Owned Since 1948 | Marshalltown, Iowa*
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## About
 
-### `npm start`
+Hogeland Auto Plaza is a family-owned automotive service center in Marshalltown, Iowa, serving Central Iowa since 1948. Founded by Lyle E. Hogeland, the business has grown to include:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **24/7 Emergency Towing** — Flatbed hauling within a 200-mile radius
+- **Auto Repair** — Full-service diagnostics and mechanical repair
+- **Parts & Salvage** — 8+ acres of new, used, and antique auto parts
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Stack
 
-### `npm test`
+- **React 19** with Create React App
+- **Framer Motion** — Page transitions and scroll animations
+- **React Router v7** — Client-side routing
+- **Lucide React** — Icon system
+- **Vanilla CSS** — Custom design system with CSS custom properties
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+```bash
+npm install
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Runs on [http://localhost:4000](http://localhost:4000)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Build for Production
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm run build
+```
 
-### `npm run eject`
+Creates an optimized build in the `build/` folder.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Pages
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| Route | Page |
+|-------|------|
+| `/` | Home — Hero, stats, services, heritage, testimonials, CTA |
+| `/towing` | 24/7 Emergency Towing — Fleet details, impound info |
+| `/repair` | Auto Repair — Service list, features |
+| `/parts` | Parts & Salvage — Inventory, part types |
+| `/history` | Our Story — Timeline, memorial, values |
+| `/contact` | Contact — Form, info cards, hours, Google Maps |
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Contact
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Phone:** 641-752-0027
+- **Toll Free:** 866-752-0027
+- **Address:** 1408 E. Main Street, Marshalltown, IA 50158

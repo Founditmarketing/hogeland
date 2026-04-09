@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Hogeland Auto",
+  "name": "Hogeland Auto Plaza | Towing, Repair & Parts",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,8 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#C41E24",
+  "background_color": "#0A0A0A",
+  "description": "24/7 Emergency Towing, Expert Auto Repair & Quality Parts in Marshalltown, Iowa. Family-owned since 1948.",
+  "categories": ["auto", "automotive", "business"]
 }

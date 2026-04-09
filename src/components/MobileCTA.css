@@ -1,0 +1,66 @@
+.mobile-cta-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 998;
+  padding: 12px 16px;
+  padding-bottom: max(12px, env(safe-area-inset-bottom));
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  gap: 10px;
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mobile-cta-bar--visible {
+  transform: translateY(0);
+}
+
+.mobile-cta-bar-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.mobile-cta-bar-btn--primary {
+  background: var(--red);
+  color: var(--white);
+  box-shadow: 0 4px 20px rgba(196, 30, 36, 0.4);
+}
+.mobile-cta-bar-btn--primary:hover {
+  background: var(--red-light);
+}
+
+.mobile-cta-bar-btn--secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+.mobile-cta-bar-btn--secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+@media (max-width: 900px) {
+  .mobile-cta-bar {
+    display: flex;
+  }
+}
+
+/* Pad footer on mobile so CTA bar doesn't overlap */
+@media (max-width: 900px) {
+  .footer {
+    padding-bottom: 80px;
+  }
+}
