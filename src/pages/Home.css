@@ -313,13 +313,29 @@
   background: var(--dark-gray);
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 20px;
-  padding: 40px 32px;
+  padding: 0;
   overflow: hidden;
   transition: all 0.3s ease;
 }
 .service-card:hover {
   border-color: rgba(255, 255, 255, 0.12);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+.service-card-img {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.service-card-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, var(--dark-gray) 100%);
+}
+.service-card-body {
+  padding: 28px 32px 36px;
 }
 .service-card-border {
   position: absolute;
@@ -408,17 +424,14 @@
   color: var(--red);
 }
 
-/* Year Card */
-.about-year-card {
-  background: var(--dark-gray);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 24px;
-  padding: 48px 40px;
-  text-align: center;
-  position: relative;
+/* Team Image */
+.about-image-wrap {
+  border-radius: 20px;
   overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
 }
-.about-year-card::before {
+.about-image-wrap::before {
   content: '';
   position: absolute;
   top: 0;
@@ -426,27 +439,14 @@
   right: 0;
   height: 3px;
   background: linear-gradient(90deg, var(--red), var(--gold));
+  z-index: 1;
 }
-.about-year {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 5rem;
-  background: linear-gradient(135deg, var(--red), var(--gold));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  line-height: 1;
-  margin-bottom: 8px;
-}
-.about-year-label {
-  font-weight: 600;
-  font-size: 1rem;
-  color: var(--white);
-  margin-bottom: 8px;
-}
-.about-year-desc {
-  color: var(--light-gray);
-  font-size: 0.9rem;
-  line-height: 1.6;
+.about-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  min-height: 320px;
 }
 
 /* ═══ TESTIMONIALS ═══ */
@@ -606,14 +606,14 @@
   .section-header {
     margin-bottom: 32px;
   }
-  .service-card {
-    padding: 28px 24px;
+  .service-card-body {
+    padding: 20px 24px 28px;
   }
-  .about-year-card {
-    padding: 32px 24px;
+  .service-card-img {
+    height: 180px;
   }
-  .about-year {
-    font-size: 3.5rem;
+  .about-image {
+    min-height: 280px;
   }
   .testimonial-card {
     padding: 24px;

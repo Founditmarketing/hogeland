@@ -7,6 +7,10 @@ import {
 } from 'lucide-react';
 import PageTransition from '../components/PageTransition';
 import heroImg from '../assets/hero-homepage.png';
+import cardTowing from '../assets/card-towing.png';
+import cardRepair from '../assets/card-repair.png';
+import cardParts from '../assets/card-parts.png';
+import aboutTeam from '../assets/about-team.png';
 import './Home.css';
 
 const fadeUp = {
@@ -24,6 +28,7 @@ const services = [
     desc: 'Flatbed hauling within 200 miles. Light to heavy duty — we handle it all, day or night.',
     link: '/towing',
     accent: 'var(--red)',
+    image: cardTowing,
   },
   {
     icon: <Wrench size={32} />,
@@ -31,6 +36,7 @@ const services = [
     desc: 'Fast, honest repair with accurate estimates. We get you back on the road safely.',
     link: '/repair',
     accent: 'var(--gold)',
+    image: cardRepair,
   },
   {
     icon: <Settings size={32} />,
@@ -38,6 +44,7 @@ const services = [
     desc: 'New, used, and antique parts. 8+ acres of inventory — we have what you need.',
     link: '/parts',
     accent: '#4A9EFF',
+    image: cardParts,
   },
 ];
 
@@ -174,14 +181,17 @@ export default function Home() {
                 custom={i}
                 whileHover={{ y: -8 }}
               >
-                <div className="service-icon" style={{ color: s.accent }}>
-                  {s.icon}
+                <div className="service-card-img" style={{ backgroundImage: `url(${s.image})` }} />
+                <div className="service-card-body">
+                  <div className="service-icon" style={{ color: s.accent }}>
+                    {s.icon}
+                  </div>
+                  <h3 className="service-title">{s.title}</h3>
+                  <p className="service-desc">{s.desc}</p>
+                  <Link to={s.link} className="service-link" style={{ color: s.accent }}>
+                    Learn More <ArrowRight size={16} />
+                  </Link>
                 </div>
-                <h3 className="service-title">{s.title}</h3>
-                <p className="service-desc">{s.desc}</p>
-                <Link to={s.link} className="service-link" style={{ color: s.accent }}>
-                  Learn More <ArrowRight size={16} />
-                </Link>
                 <div className="service-card-border" style={{ background: s.accent }} />
               </motion.div>
             ))}
@@ -233,12 +243,8 @@ export default function Home() {
             variants={fadeUp}
             custom={2}
           >
-            <div className="about-year-card">
-              <div className="about-year">1948</div>
-              <div className="about-year-label">Year Founded</div>
-              <div className="about-year-desc">
-                Three generations of automotive expertise under one roof
-              </div>
+            <div className="about-image-wrap">
+              <img src={aboutTeam} alt="The Hogeland Auto Plaza team" className="about-image" />
             </div>
           </motion.div>
         </div>

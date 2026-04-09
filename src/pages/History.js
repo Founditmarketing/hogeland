@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Award, ArrowRight, Heart, Leaf, Users, Phone } from 'lucide-react';
 import PageTransition from '../components/PageTransition';
+import heroImg from '../assets/hero-history.png';
 import './History.css';
 
 const fadeUp = {
@@ -48,7 +49,7 @@ export default function History() {
     <PageTransition>
       {/* Hero */}
       <section className="page-hero">
-        <div className="page-hero-bg">
+        <div className="page-hero-bg" style={{ backgroundImage: `url(${heroImg})` }}>
           <div className="page-hero-gradient page-hero-gradient--red" />
           <div className="page-hero-grid" />
         </div>
