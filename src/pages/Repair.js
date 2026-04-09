@@ -6,6 +6,7 @@ import {
   CheckCircle2, Gauge, DollarSign
 } from 'lucide-react';
 import PageTransition from '../components/PageTransition';
+import heroImg from '../assets/hero-repair.png';
 import './ServicePage.css';
 
 const fadeUp = {
@@ -34,7 +35,7 @@ export default function Repair() {
     <PageTransition>
       {/* Hero */}
       <section className="page-hero">
-        <div className="page-hero-bg">
+        <div className="page-hero-bg" style={{ backgroundImage: `url(${heroImg})` }}>
           <div className="page-hero-gradient page-hero-gradient--gold" />
           <div className="page-hero-grid" />
         </div>

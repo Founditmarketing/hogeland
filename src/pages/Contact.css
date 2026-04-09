@@ -233,15 +233,28 @@
 }
 
 @media (max-width: 900px) {
+  .contact-section {
+    padding: 50px 0;
+  }
   .contact-grid {
     grid-template-columns: 1fr;
   }
 }
 @media (max-width: 600px) {
+  .contact-section {
+    padding: 40px 0;
+  }
   .form-row {
     grid-template-columns: 1fr;
   }
   .contact-form-wrap {
-    padding: 28px 24px;
+    padding: 24px 20px;
+  }
+  .contact-info-card,
+  .contact-hours-card {
+    padding: 24px 20px;
+  }
+  .map-section {
+    height: 300px;
   }
 }

@@ -108,3 +108,29 @@
   font-size: 0.95rem;
   line-height: 1.7;
 }
+
+@media (max-width: 900px) {
+  .memorial-section {
+    padding: 40px 0;
+  }
+  .memorial-card {
+    padding: 28px 24px;
+  }
+  .memorial-name {
+    font-size: 1.6rem;
+  }
+  .timeline-section {
+    padding: 50px 0;
+  }
+  .timeline-item {
+    padding-bottom: 32px;
+  }
+}
+@media (max-width: 600px) {
+  .memorial-section {
+    padding: 32px 0;
+  }
+  .timeline-section {
+    padding: 40px 0;
+  }
+}

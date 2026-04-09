@@ -6,6 +6,7 @@ import {
   Shield, Clock, Award, Star, ChevronRight, MapPin
 } from 'lucide-react';
 import PageTransition from '../components/PageTransition';
+import heroImg from '../assets/hero-homepage.png';
 import './Home.css';
 
 const fadeUp = {
@@ -58,7 +59,7 @@ export default function Home() {
     <PageTransition>
       {/* ── HERO ── */}
       <section className="hero">
-        <div className="hero-bg">
+        <div className="hero-bg" style={{ backgroundImage: `url(${heroImg})` }}>
           <div className="hero-gradient" />
           <div className="hero-grid-pattern" />
         </div>

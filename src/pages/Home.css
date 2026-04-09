@@ -89,14 +89,15 @@
   position: absolute;
   inset: 0;
   z-index: 0;
+  background-size: cover;
+  background-position: center;
 }
 .hero-gradient {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 60% 50% at 20% 50%, rgba(196, 30, 36, 0.12) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 60% at 80% 30%, rgba(74, 158, 255, 0.06) 0%, transparent 60%),
-    linear-gradient(180deg, var(--black) 0%, var(--charcoal) 100%);
+    linear-gradient(180deg, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.7) 40%, rgba(20,20,20,0.92) 100%),
+    radial-gradient(ellipse 60% 50% at 20% 50%, rgba(196, 30, 36, 0.12) 0%, transparent 70%);
 }
 .hero-gradient::after {
   content: '';
@@ -555,43 +556,95 @@
 
 /* ═══ RESPONSIVE ═══ */
 @media (max-width: 900px) {
+  .hero {
+    min-height: auto;
+  }
   .hero-inner {
     grid-template-columns: 1fr;
-    padding-top: 100px;
-    gap: 40px;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    gap: 28px;
   }
   .hero-visual {
     max-width: 400px;
   }
+  .hero-subtitle {
+    margin-bottom: 24px;
+  }
+  .hero-actions {
+    margin-bottom: 20px;
+  }
   .stats-inner {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .services-section {
+    padding: 60px 0;
   }
   .services-grid {
     grid-template-columns: 1fr;
     max-width: 500px;
     margin: 0 auto;
   }
+  .about-strip {
+    padding: 60px 0;
+  }
   .about-inner {
     grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .testimonials-section {
+    padding: 60px 0;
   }
   .testimonials-grid {
     grid-template-columns: 1fr;
     max-width: 500px;
     margin: 0 auto;
   }
+  .cta-section {
+    padding: 60px 0;
+  }
+  .section-header {
+    margin-bottom: 32px;
+  }
+  .service-card {
+    padding: 28px 24px;
+  }
+  .about-year-card {
+    padding: 32px 24px;
+  }
+  .about-year {
+    font-size: 3.5rem;
+  }
+  .testimonial-card {
+    padding: 24px;
+  }
 }
 @media (max-width: 600px) {
+  .hero-inner {
+    padding-top: 60px;
+    padding-bottom: 32px;
+  }
   .hero-title {
     font-size: 2.4rem;
   }
+  .stats-section {
+    margin-top: -20px;
+  }
   .stats-inner {
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    gap: 10px;
   }
   .stat-card {
-    padding: 20px 16px;
+    padding: 18px 14px;
   }
   .stat-value {
     font-size: 1.8rem;
+  }
+  .section-header {
+    margin-bottom: 28px;
+  }
+  .about-text p {
+    font-size: 0.93rem;
+    margin-bottom: 20px;
   }
 }

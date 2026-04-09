@@ -8,6 +8,8 @@
 .page-hero-bg {
   position: absolute;
   inset: 0;
+  background-size: cover;
+  background-position: center;
 }
 .page-hero-gradient {
   position: absolute;
@@ -15,18 +17,18 @@
 }
 .page-hero-gradient--red {
   background:
-    radial-gradient(ellipse 50% 60% at 50% 30%, rgba(196, 30, 36, 0.15) 0%, transparent 70%),
-    linear-gradient(180deg, var(--black) 0%, var(--charcoal) 100%);
+    linear-gradient(180deg, rgba(10,10,10,0.82) 0%, rgba(10,10,10,0.65) 40%, rgba(20,20,20,0.9) 100%),
+    radial-gradient(ellipse 50% 60% at 50% 30%, rgba(196, 30, 36, 0.15) 0%, transparent 70%);
 }
 .page-hero-gradient--gold {
   background:
-    radial-gradient(ellipse 50% 60% at 50% 30%, rgba(212, 168, 67, 0.12) 0%, transparent 70%),
-    linear-gradient(180deg, var(--black) 0%, var(--charcoal) 100%);
+    linear-gradient(180deg, rgba(10,10,10,0.82) 0%, rgba(10,10,10,0.65) 40%, rgba(20,20,20,0.9) 100%),
+    radial-gradient(ellipse 50% 60% at 50% 30%, rgba(212, 168, 67, 0.12) 0%, transparent 70%);
 }
 .page-hero-gradient--blue {
   background:
-    radial-gradient(ellipse 50% 60% at 50% 30%, rgba(74, 158, 255, 0.1) 0%, transparent 70%),
-    linear-gradient(180deg, var(--black) 0%, var(--charcoal) 100%);
+    linear-gradient(180deg, rgba(10,10,10,0.82) 0%, rgba(10,10,10,0.65) 40%, rgba(20,20,20,0.9) 100%),
+    radial-gradient(ellipse 50% 60% at 50% 30%, rgba(74, 158, 255, 0.1) 0%, transparent 70%);
 }
 .page-hero-gradient::after {
   content: '';
@@ -260,14 +262,42 @@
 
 /* ═══ RESPONSIVE ═══ */
 @media (max-width: 900px) {
+  .page-hero {
+    padding: 100px 0 60px;
+  }
+  .sp-section {
+    padding: 50px 0;
+  }
+  .sp-cta {
+    padding: 50px 0;
+  }
   .sp-feature-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
   }
   .sp-list-grid--3col {
     grid-template-columns: repeat(2, 1fr);
   }
+  .sp-feature-card {
+    padding: 22px 18px;
+  }
 }
 @media (max-width: 600px) {
+  .page-hero {
+    padding: 80px 0 48px;
+  }
+  .page-hero-title {
+    font-size: 2.2rem;
+  }
+  .page-hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 24px;
+  }
+  .page-hero-icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 18px;
+  }
   .sp-feature-grid {
     grid-template-columns: 1fr;
     max-width: 400px;
@@ -277,6 +307,9 @@
     grid-template-columns: 1fr;
   }
   .sp-impound-card {
-    padding: 28px 24px;
+    padding: 24px 20px;
+  }
+  .sp-cta-content h2 {
+    font-size: 1.6rem;
   }
 }
